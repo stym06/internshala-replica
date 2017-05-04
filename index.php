@@ -47,6 +47,7 @@ $result=mysqli_query($conn,$query);
 
  ?>
 	<div class="well bg-info">
+  <h4><strong>Title: </strong><?php echo $row['employer']; ?></h4>
 		<h4><strong>Title: </strong><?php echo $row['title']; ?></h4>
 		<p><strong>Description: </strong><?php echo $row['description']; ?></p>
 		<p><strong>Stipend: Rs. </strong><?php echo $row['stipend']; ?></p>

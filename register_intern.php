@@ -1,22 +1,19 @@
-<?php session_start();
+<?php 
+session_start();
+include('dbconnect.php');
+$usname=$_SESSION['username'];
  ?>
-<!DOCTYPE html>
-	<html lang="en">
+ <!DOCTYPE html>
+<html lang="en">
 	<head>
 		<link rel="stylesheet" href="assets/css/bootstrap.css">
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 		<script src="assets/js/jquery-3.2.0.min.js"></script>
 		<script src="js/bootstrap.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+    	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 <body>
-<?php 
-include('dbconnect.php');
-$usname=$_SESSION['username'];
-$query="SELECT * FROM internships";
-$result=mysqli_query($conn,$query);
-?>
 	<nav class="navbar navbar-inverse">
   		<div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,37 +30,15 @@ $result=mysqli_query($conn,$query);
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">Logged in as <?php echo $usname; ?></a></li>
+       <li><a href="#">Logged in as <?php echo $usname; ?></a></li>
       </ul>
-        
-      </ul>
-     <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right">
         <li><a href="logout.php"><span class="glyphicon glyphicon-tasks"></span> Log Out</a></li>
       </ul>
+    
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div class="alert alert-success alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Hello!</strong> Welcome to your profile <?php echo $usname; ?>
-</div>
-<div class="container bg-success" id="content">
- <h1 class="text-primary text-center"> Available Internships </h1>
-<?php
-	while($row=mysqli_fetch_assoc($result)){
-
- ?>
-	<div class="well bg-info">
-  <h4><strong>Title: </strong><?php echo $row['employer']; ?></h4>
-		<h4><strong>Title: </strong><?php echo $row['title']; ?></h4>
-		<p><strong>Description: </strong><?php echo $row['description']; ?></p>
-		<p><strong>Stipend: Rs. </strong><?php echo $row['stipend']; ?></p>
-		<a role="button" href="register_intern.php" class="btn btn-block btn-success">Apply</a>
-	</div>
-	<?php 
-	}
-	mysqli_close($conn);
-	?>
-</div>
+<h1>Put the application for internship here</h1>
 </body>
 </html>
