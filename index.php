@@ -11,7 +11,7 @@
 <?php 
 include('dbconnect.php');
 
-$query="SELECT * FROM internships";
+$query="SELECT * FROM internships WHERE end_date>CURDATE()";
 $result=mysqli_query($conn,$query);
 ?>
 	<nav class="navbar navbar-inverse">
@@ -51,6 +51,8 @@ $result=mysqli_query($conn,$query);
 		<h4><strong>Title: </strong><?php echo $row['title']; ?></h4>
 		<p><strong>Description: </strong><?php echo $row['description']; ?></p>
 		<p><strong>Stipend: Rs. </strong><?php echo $row['stipend']; ?></p>
+    <p><strong>Start Date: </strong><?php echo $row['start_date']; ?></p>
+    <p><strong>End Date: </strong><?php echo $row['end_date']; ?></p>
 		<a role="button" href="login.php" class="btn btn-block btn-success">Apply</a>
 	</div>
 	<?php 

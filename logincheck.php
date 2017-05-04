@@ -3,8 +3,9 @@
 	$_SESSION['username']=$_POST['username'];
 	include('dbconnect.php');
 
+
 	$username=$_POST['username'];
-	$password=$_POST['password'];
+	$password=md5($_POST['password']);
 	$_SESSION['uname']=$username;
 	$query="SELECT * FROM login WHERE username='$username' AND password='$password'";
 	$result=mysqli_query($conn,$query);
