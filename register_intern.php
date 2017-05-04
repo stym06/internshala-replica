@@ -2,8 +2,9 @@
 session_start();
 include('dbconnect.php');
 $employer=$_GET['employer'];
+$title=$_GET['title'];
 $usname=$_SESSION['username'];
-$query="SELECT * FROM internships WHERE employer='$employer'";
+$query="SELECT * FROM internships WHERE employer='$employer' AND title='$title'";
 $result=mysqli_query($conn,$query);
 $row=mysqli_fetch_assoc($result);
  ?>
