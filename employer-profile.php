@@ -6,6 +6,8 @@
 		<link rel="stylesheet" href="assets/css/bootstrap.css">
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 		<script src="assets/js/jquery-3.2.0.min.js"></script>
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 		<script src="js/bootstrap.js"></script>
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>

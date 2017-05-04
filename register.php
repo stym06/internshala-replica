@@ -1,19 +1,18 @@
-<html>
+<?php 
+session_start();
+include('dbconnect.php');
+ ?>
+ <!DOCTYPE html>
+<html lang="en">
 	<head>
 		<link rel="stylesheet" href="assets/css/bootstrap.css">
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 		<script src="assets/js/jquery-3.2.0.min.js"></script>
 		<script src="js/bootstrap.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+    	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 <body>
-<?php 
-include('dbconnect.php');
-
-$query="SELECT * FROM internships";
-$result=mysqli_query($conn,$query);
-?>
 	<nav class="navbar navbar-inverse">
   		<div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -40,22 +39,3 @@ $result=mysqli_query($conn,$query);
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div class="container bg-success" id="content">
- <h1 class="text-primary text-center"> Available Internships </h1>
-<?php
-	while($row=mysqli_fetch_assoc($result)){
-
- ?>
-	<div class="well bg-info">
-		<h4><strong>Title: </strong><?php echo $row['title']; ?></h4>
-		<p><strong>Description: </strong><?php echo $row['description']; ?></p>
-		<p><strong>Stipend: Rs. </strong><?php echo $row['stipend']; ?></p>
-		<a role="button" href="login.php" class="btn btn-block btn-success">Apply</a>
-	</div>
-	<?php 
-	}
-	mysqli_close($conn);
-	?>
-</div>
-</body>
-</html>
