@@ -31,7 +31,7 @@ $result=mysqli_query($conn,$query);
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="login.php">Log In  <span class="glyphicon glyphicon-user"></span><span class="sr-only">(current)</span></a></li>
-        
+        <li><a href="signup.php">Sign Up <span class="glyphicon glyphicon-user"></span><span class="sr-only">(current)</span></a></li>
       </ul>
       <!--<ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-tasks"></span> Log Out</a></li>

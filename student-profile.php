@@ -58,7 +58,7 @@ $result=mysqli_query($conn,$query);
 		<h4><strong>Title: </strong><?php echo $row['title']; ?></h4>
 		<p><strong>Description: </strong><?php echo $row['description']; ?></p>
 		<p><strong>Stipend: Rs. </strong><?php echo $row['stipend']; ?></p>
-		<a role="button" href="register_intern.php" class="btn btn-block btn-success">Apply</a>
+		<a role="button" href="register_intern.php?employer=<?php echo $row['employer']?>" class="btn btn-block btn-success">Apply</a>
 	</div>
 	<?php 
 	}
