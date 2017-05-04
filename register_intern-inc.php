@@ -5,8 +5,9 @@
 	$name=$_POST['name'];
 	$email=$_POST['email'];
 	$employer=$_POST['employer'];
+	$title=$_POST['title'];
 
-	$query="INSERT INTO student_applications(name,email,employer) VALUES('$name','$email','$employer')";
+	$query="INSERT INTO student_applications(name,email,employer,job_title) VALUES('$name','$email','$employer','$title')";
 	$result=mysqli_query($conn,$query);
 	if($result)
 		header("Location: student-profile.php");

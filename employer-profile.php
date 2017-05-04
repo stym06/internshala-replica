@@ -93,6 +93,7 @@
 						<tr>
 							<th>Name</th>
 							<th>Email</th>
+							<th>Title</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -106,6 +107,7 @@
 					 <tr>
 					 	<td><?php echo $rowz['name']; ?></td>
 					 	<td><?php echo $rowz['email']; ?></td>
+					 	<td><?php echo $rowz['job_title']; ?></td>
 					 </tr>
 					 <?php } ?>
 					</tbody>

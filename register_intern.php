@@ -57,6 +57,7 @@ $row=mysqli_fetch_assoc($result);
   ?>
 </div>
 <form class="form-horizontal" action="register_intern-inc.php" method="post">
+<input type="hidden" name="title" value="<?php echo $row['title']; ?>">
   <div class="form-group">
     <label class="col-sm-2 control-label">Name:</label>
     <div class="col-sm-8">
