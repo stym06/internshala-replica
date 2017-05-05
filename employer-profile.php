@@ -9,7 +9,22 @@
 		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 		<script src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 		<link rel="stylesheet" href="assets/css/style.css">
+		<script>
+    $(document).ready(function(){
+      var date_input=$('input[name="sdate"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'yyyy/mm/dd',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    })
+</script>
 	</head>
 <body>
 <?php 
@@ -65,6 +80,14 @@
 					<label>Stipend: </label>
 					<input type="text" name="stipend" class="form-control">
 				</div>
+				<div class="form-group">
+					<label>Start Date: </label>
+					<input type="text" name="start_date" placeholder="YYYY-MM-DD" class="form-control datepicker">
+				</div>
+				<div class="form-group">
+					<label>End Date: </label>
+					<input type="text" name="end_date" placeholder="YYYY-MM-DD" class="form-control datepicker">
+				</div>
 				<button type="submit" class="btn btn-primary btn-block">Add Internship</button>
 			</form>
 		</div>
@@ -75,12 +98,14 @@
 
  ?>
 	<div class="well bg-info">
-	<form action="delete.php">
+
 		<h4><strong>Employer: </strong><?php echo $row['employer']; ?></h4>
 		<h4><strong>Title: </strong><?php echo $row['title']; ?></h4>
 		<p><strong>Description: </strong><?php echo $row['description']; ?></p>
 		<p><strong>Stipend: Rs. </strong><?php echo $row['stipend']; ?></p>
-	</form>
+		<p><strong>Start Date: </strong><?php echo $row['start_date']; ?></p>
+		<p><strong>End Date: </strong><?php echo $row['end_date']; ?></p>		
+
 	</div>
 	<?php 
 	}
@@ -108,10 +133,9 @@
 					 	<td><?php echo $rowz['name']; ?></td>
 					 	<td><?php echo $rowz['email']; ?></td>
 					 	<td><?php echo $rowz['job_title']; ?></td>
-					 </tr>
-					 <?php } ?>
 					</tbody>
 					</table>
+					<?php } ?>
 		</div>
 		</div>
 	</div>

@@ -23,8 +23,12 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+	$s_date=$_POST['start_date'];
+	$s_date=date("Y-m-d",strtotime($s_date));
+	$e_date=$_POST['end_date'];
+	$e_date=date("Y-m-d",strtotime($e_date));
 
-	$query="INSERT INTO internships(employer,title,description,stipend) VALUES('$employer','$title','$description','$stipend')";
+	$query="INSERT INTO internships(employer,title,description,stipend,start_date,end_date) VALUES('$employer','$title','$description','$stipend','$s_date','$e_date')";
 	if(mysqli_query($conn,$query)){
 		header("Location:employer-profile.php");
 	}
