@@ -47,9 +47,9 @@ $row=mysqli_fetch_assoc($result);
 </nav>
 <div class="jumbotron" style="width:70%; margin:0 auto;">
   
-  <h2 class="text-info"> Applying for </h2> <br>
+  <p class="text-info" style="font-size: 60px;"> Applying for </p>
   <div class="well well-lg bg-info">
-  <h4><strong>Title: </strong><?php echo $row['employer']; ?></h4>
+  <p><strong>Employer: </strong><?php echo $row['employer']; ?></p>
     <h4><strong>Title: </strong><?php echo $row['title']; ?></h4>
     <p><strong>Description: </strong><?php echo $row['description']; ?></p>
     <p><strong>Stipend: Rs. </strong><?php echo $row['stipend']; ?></p>
