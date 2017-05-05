@@ -49,7 +49,7 @@
 	<div class="row">
 		<div class="col-sm-4">
 		<h2 class="text-center"><strong>Add another internship </strong></h2>
-			<form role="form" action="insert.php" method="post">
+			<form role="form" action="insert_internship.php" method="post">
 			<input type="hidden" name="id" value="<?php echo $row['id']; ?>">
 			<div class="form-group">
 					<label>Employer: </label>
@@ -75,7 +75,7 @@
 					<label>End Date: </label>
 					<input type="text" name="end_date" placeholder="YYYY-MM-DD" class="form-control datepicker">
 				</div>
-				<button type="submit" class="btn btn-primary btn-block">Add Internship</button>
+				<button type="submit" name="loginBtn" class="btn btn-primary btn-block">Add Internship</button>
 			</form>
 		</div>
 		<div class="col-sm-4">

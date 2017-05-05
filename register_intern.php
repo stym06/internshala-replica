@@ -77,7 +77,7 @@ $row=mysqli_fetch_assoc($result);
       <input type="text" name="employer" class="form-control" id="inputEmail3" value="<?php echo $row['employer']; ?>">
     </div>
   </div>
-  <button class="btn btn-success btn-lg" style="position: relative; left:420px;">Apply</button>
+  <button class="btn btn-success btn-lg" name="loginBtn" style="position: relative; left:420px;">Apply</button>
 </div>
 </body>
 </html>

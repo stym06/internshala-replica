@@ -59,7 +59,7 @@ include('dbconnect.php');
 <div>
   <h2 class="text-info text-center">Sign Up</h2><br>
 </div>
-  <form class="form-horizontal" action="signup-inc.php" method="post">
+  <form class="form-horizontal" action="newregister.php" method="post">
   <div class="form-group">
     <label class="col-sm-2 control-label">Name:</label>
     <div class="col-sm-10">
@@ -98,7 +98,7 @@ include('dbconnect.php');
 </div><br>
   <div class="form-group register">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default btn-block">Register</button>
+      <button type="submit" name="loginBtn" class="btn btn-default btn-block">Register</button>
     </div>
   </div>
 </form>
