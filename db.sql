@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2017 at 08:49 PM
+-- Generation Time: May 05, 2017 at 02:39 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -44,7 +44,8 @@ INSERT INTO `internships` (`id`, `employer`, `title`, `description`, `stipend`, 
 (15, 'dell', 'Technicion', 'Repairs mostly', 1000, '2017-05-06', '2017-06-06'),
 (16, 'maq', 'Systems Engineer', 'something something you know', 6000, '2017-05-06', '2017-06-06'),
 (17, 'amazon', 'Java Developer', 'Make Java applications', 40000, '2017-05-06', '2017-06-07'),
-(18, 'amazon', 'Front-end Developer', 'Build the core functionality of the website', 0, '2017-03-06', '2017-03-20');
+(18, 'amazon', 'Front-end Developer', 'Build the core functionality of the website', 0, '2017-03-06', '2017-03-20'),
+(24, 'amazon', 'Back End Developer', 'Does the server things', 15000, '2017-05-15', '2017-06-10');
 
 -- --------------------------------------------------------
 
@@ -74,7 +75,8 @@ INSERT INTO `login` (`id`, `name`, `username`, `email`, `password`, `type`) VALU
 (7, 'Dell', 'dell', 'careers@dell.com', '51a32d722dd3b81772a68c7449d5e62d', 1),
 (8, 'Microsoft', 'ms', 'careers@ms.com', '5f532a3fc4f1ea403f37070f59a7a53a', 1),
 (9, 'Kraken', 'rage_warrior', 'kraken@underworld.com', '80cd46c824f8e86438816e6e562e969f', 0),
-(10, 'Ashish', 'ashish', 'ashish@gmail.com', '7b69ad8a8999d4ca7c42b8a729fb0ffd', 0);
+(10, 'Ashish', 'ashish', 'ashish@gmail.com', '7b69ad8a8999d4ca7c42b8a729fb0ffd', 0),
+(11, 'Abhinav', 'krotos', 'abhinav@krotos.com', '8417bf3b2e5c0462e25b3d899804a800', 0);
 
 -- --------------------------------------------------------
 
@@ -101,7 +103,8 @@ INSERT INTO `student_applications` (`id`, `name`, `email`, `employer`, `job_titl
 (8, 'John', 'john@applu.cmo', 'maq', 'Systems Engineer'),
 (12, 'satyam', 'satyammast@gmail.com', 'HP', 'HP Officer'),
 (13, 'John', 'john@mic.com', 'dell', 'Technicion'),
-(14, 'Kraken', 'kraken@underworld.com', 'HP', 'HP Officer');
+(14, 'Kraken', 'kraken@underworld.com', 'HP', 'HP Officer'),
+(15, 'Abhinav', 'abhinav@krotos.com', 'maq', 'Systems Engineer');
 
 --
 -- Indexes for dumped tables
@@ -133,17 +136,17 @@ ALTER TABLE `student_applications`
 -- AUTO_INCREMENT for table `internships`
 --
 ALTER TABLE `internships`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `student_applications`
 --
 ALTER TABLE `student_applications`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
