@@ -2,7 +2,7 @@
 session_start();
 include_once('dbconnect.php');
 
-IF (isset($_POST['loginBtn'])) { // the form was submitted
+
 
   $err = ""; // default error as empty
   $employer= trim($_POST['employer']);
@@ -25,10 +25,6 @@ IF (empty($description)) { $err .= "Desciption is empty & "; }
 
   IF (empty($stipend)) { $err .= "Stipend is empty."; }
 
-IF (empty($s_date)) { $err .= "Start Date is empty & "; }
-
-IF (empty($e_date)) { $err .= "End Date is empty & "; }
-
   IF (!empty($err)) {
 
     // there are errors
@@ -40,14 +36,14 @@ IF (empty($e_date)) { $err .= "End Date is empty & "; }
   }ELSE{
 
     // No errors
-    $uemployer = mysqli_real_escape_string($employer);
-    $utitle = mysqli_real_escape_string($title);
-    $udesciption = mysqli_real_escape_string($description);
-    $ustipend = mysqli_real_escape_string($stipend);
-    $us_date = mysqli_real_escape_string($s_date);
-    $ue_date = mysqli_real_escape_string($e_date);
+    $uemployer = mysqli_real_escape_string($conn,$employer);
+    $utitle = mysqli_real_escape_string($conn,$title);
+    $udescription = mysqli_real_escape_string($conn,$description);
+    $ustipend = mysqli_real_escape_string($conn,$stipend);
+    $s_date = mysqli_real_escape_string($conn,$s_date);
+    $e_date = mysqli_real_escape_string($conn,$e_date);
 
-    $query="INSERT INTO internships(employer,title,description,stipend,start_date,end_date) VALUES('$uemployer','$utitle','$udescription','$ustipend','$us_date','$ue_date')";
+    $query="INSERT INTO internships(employer,title,description,stipend,start_date,end_date) VALUES('$uemployer','$utitle','$udescription','$ustipend','$s_date','$e_date')";
 
     $result = mysqli_query($conn,$query);
 
@@ -65,10 +61,4 @@ IF (empty($e_date)) { $err .= "End Date is empty & "; }
 
   }
 
-}ELSE{
-  // form not submitted
-  
-  echo "<script>alert('Error. Enter again');</script>";
-    echo "<script>setTimeout(\"location.href = 'employer-profile.php';\",200);</script>";
-}
 ?>
