@@ -40,7 +40,7 @@
       <li><a href="#">Logged in as <?php echo $usname; ?></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="logout.php" role="button"><span class="glyphicon glyphicon-tasks"></span> Log Out</a></li>
+        <li><a href="logout" role="button"><span class="glyphicon glyphicon-tasks"></span> Log Out</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

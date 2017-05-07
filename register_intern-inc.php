@@ -14,7 +14,7 @@
 
 	if(!empty($err)) {
 		echo "<script>alert('$err'); </script>";
-		echo "<script>setTimeout(\"location.href='student-profile.php';\",200)</script>";
+		echo "<script>setTimeout(\"location.href='student-profile';\",200)</script>";
 	}
 	else{
 				//No errors
@@ -31,15 +31,15 @@
 					$result=mysqli_query($conn,$query);
 					if($result){
 						echo "<script>alert('Application sent!');</script>";
-						echo "<script>setTimeout(\"location.href='student-profile.php'\",200);</script>";
+						echo "<script>setTimeout(\"location.href='student-profile'\",200);</script>";
 					}
 					else
-						header("Location: register_intern.php");
+						header("Location: register_intern");
 				}
 				else{
 				//user already applied
 				echo "<script>alert('Already applied');</script>";
-				echo "<script>setTimeout(\"location.href = 'student-profile.php';\",200);</script>";
+				echo "<script>setTimeout(\"location.href = 'student-profile';\",200);</script>";
 			}
 
 	}

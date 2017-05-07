@@ -45,7 +45,7 @@ IF (isset($_POST['loginBtn'])) { // the form was submitted
 
     IF ($result) {
       // set session
-      header('Location: login.php');
+      header('Location: login');
 
     }ELSE{
       echo("<p>Email address and or your password was incorrect.<br>If you do not have an account please create one.</p>");
@@ -58,6 +58,6 @@ IF (isset($_POST['loginBtn'])) { // the form was submitted
 
 }ELSE{
   // form not submitted
-  header("Location: signup.php");
+  header("Location: signup");
 }
 ?>

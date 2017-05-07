@@ -36,10 +36,10 @@ $row=mysqli_fetch_assoc($result);
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
        <li><a href="#">Logged in as <?php echo $usname; ?></a></li>
-       <li><a href="student-profile.php"><span class="glyphicon glyphicon-arrow-left"></span><strong>  Back</strong></a></li>
+       <li><a href="student-profile"><span class="glyphicon glyphicon-arrow-left"></span><strong>  Back</strong></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="logout.php"><span class="glyphicon glyphicon-tasks"></span> Log Out</a></li>
+        <li><a href="logout"><span class="glyphicon glyphicon-tasks"></span> Log Out</a></li>
       </ul>
     
     </div><!-- /.navbar-collapse -->

@@ -30,8 +30,8 @@ $result=mysqli_query($conn,$query);
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="login.php">Log In  <span class="glyphicon glyphicon-user"></span><span class="sr-only">(current)</span></a></li>
-        <li><a href="signup.php">Sign Up <span class="glyphicon glyphicon-user"></span><span class="sr-only">(current)</span></a></li>
+        <li><a href="login">Log In  <span class="glyphicon glyphicon-user"></span><span class="sr-only">(current)</span></a></li>
+        <li><a href="signup">Sign Up <span class="glyphicon glyphicon-user"></span><span class="sr-only">(current)</span></a></li>
       </ul>
       <!--<ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-tasks"></span> Log Out</a></li>
@@ -53,7 +53,7 @@ $result=mysqli_query($conn,$query);
 		<p><strong>Stipend: Rs. </strong><?php echo $row['stipend']; ?></p>
     <p><strong>Start Date: </strong><?php echo $row['start_date']; ?></p>
     <p><strong>End Date: </strong><?php echo $row['end_date']; ?></p>
-		<a role="button" href="login.php" class="btn btn-block btn-success">Apply</a>
+		<a role="button" href="login" class="btn btn-block btn-success">Apply</a>
 	</div>
 	<?php 
 	}

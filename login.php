@@ -19,7 +19,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.php">Internshala</a>
+      <a class="navbar-brand" href="index">Internshala</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -43,7 +43,7 @@
   <input type="password" name="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
 </div>
 <button type="submit" class="btn btn-info btn-block" id="loginbtn">Log In</button>
-<a role="button" href="signup.php" class="btn btn-info btn-block" id="loginbtn2">Sign Up</a>
+<a role="button" href="signup" class="btn btn-info btn-block" id="loginbtn2">Sign Up</a>
 	</form>
 </div>
 </body>

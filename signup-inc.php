@@ -55,9 +55,9 @@ function test_input($data) {
 	$query="INSERT INTO login(name,username,email,password,type) VALUES('$name','$username','$email','$password','$utype')";
 	$result=mysqli_query($conn,$query);
 	if($result){
-		header('Location: login.php');
+		header('Location: login');
 	}
 	else
-		header('Location: signup.php');
+		header('Location: signup');
 
  ?>

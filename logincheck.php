@@ -14,10 +14,10 @@
 	$num_rows=mysqli_num_rows($result);
 	if($num_rows>0){
 	if($user_type==1)
-		header("Location: employer-profile.php");
+		header("Location: employer-profile");
 	else
-		header("Location: student-profile.php");
+		header("Location: student-profile");
 	}
 	else
-		header("Location: login.php");
+		header("Location: login");
 ?>
